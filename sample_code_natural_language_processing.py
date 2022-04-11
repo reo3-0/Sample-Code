@@ -9,10 +9,10 @@ def RowObject_2_csv_row(row):
     """
     Input: A RowObject
     Output: A dictionary with keys that are row headers and values containing
-    data from the RowObject that will populate the CSV row
-    Description: A helper function that helps the iterative loop below it by 
-    stripping the relevant information from each RowObject and putting it into 
-    a dictionary that is then used to write a new csv
+    data from the RowObject that will populate a single CSV row
+    Description: A helper function implemented in the iterative loop below.  
+    Strips the relevant information from each RowObject and organizes it
+    into a dictionary. 
     """   
     global depth
     global level_names
