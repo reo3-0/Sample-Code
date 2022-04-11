@@ -1,20 +1,19 @@
-# Code originally from the Cook County SAO project which used Natural Language
-# Processing to convert the Illinois Compiled Statutes into a data table.
+# This is the last piece of a Natural Language Processing script. It implements
+# a number of functions which are not displayed to turn the html file into
+# a user-defined RowObject class and then use them to write and populate a CSV. 
 #
-# These are the last lines of code in the script. They implement a number of
-# functions which are not displayed to turn the html file into RowObjects
-# (user-defined class) and then use them to write and populate a CSV. 
+# Code originally from the Cook County SAO project which converts the
+# Illinois Compiled Statutes into a data table.
 
 def RowObject_2_csv_row(row):
     """
     Input: A RowObject
-    Output: A dictionary with keys that are row headers and values containing data  
-    from RowObjects that will populate the CSV row
+    Output: A dictionary with keys that are row headers and values containing
+    data from the RowObject that will populate the CSV row
     Description: A helper function that helps the iterative loop below it by 
     stripping the relevant information from each RowObject and putting it into 
     a dictionary that is then used to write a new csv
     """   
-    #I pull these down because earlier in this code I strip the html for useful information to fill in the new csv
     global depth
     global level_names
     global level_text
